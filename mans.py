@@ -2,7 +2,7 @@ import subprocess
 import re
 
 class CommandManual:
-    "a class that has all information about a command, and can get various information about it"
+    "a class that just stores the command information"
     def __init__(self, command):
         self.command = command
 
@@ -56,8 +56,9 @@ class CommandManualGenerator:
             manual = CommandManual(command)
             manuals[command] = manual.generate_manual()
         return manuals
+   
 
-class XmlSerializer():
+class XmlSerializer(): # returns an xml string
     def __init__(self, command_manual):
         self.command_manual = command_manual
 

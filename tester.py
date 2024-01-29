@@ -1,9 +1,10 @@
-from mans import CommandManual, CommandManualGenerator, XmlSerializer
+from manuals import *
 
-command1 = CommandManual("")
 
-res = command1.generate_manual()
+gen = CommandManualGenerator("commands.txt")
+gen.make_groups()
+manuals = gen.make_all_manuals()
 
-s = XmlSerializer(command_manual=command1)
-
-print(s.generate_xml())
+for manual in manuals:
+    print(manual)
+    print("#"*50)
