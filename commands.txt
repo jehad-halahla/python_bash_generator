@@ -18,3 +18,4 @@ lscpu
 id
 lspci
 pwd
+garbage

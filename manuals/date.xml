@@ -5,7 +5,7 @@
 	<version>date (GNU coreutils) 8.32</version>
 	<example>date</example>
 	<example_output>
-Wed Jan 31 05:51:48 PM IST 2024
+Wed Jan 31 07:30:18 PM IST 2024
 </example_output>
 	<related_commands>cal, hwclock</related_commands>
 </CommandManual>

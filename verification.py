@@ -22,6 +22,7 @@ class Verifier:
                 break
         else:
             print(f'{command}.xml not found')
+            return None
         #now with the manual, we can verify it
         #make a test
         test = self.generator.make_manual(command)
