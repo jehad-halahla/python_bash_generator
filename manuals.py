@@ -2,6 +2,9 @@
 import subprocess
 import re
 import os
+import xml.etree.ElementTree as ET
+from xml.dom.minidom import parseString
+
 
 class CommandManual:
     "a record class that represents a command manual"
@@ -94,6 +97,7 @@ class CommandManualGenerator:
             command = CommandManual(command, desc, version, example, example_out, related_commands)
             manuals.append(command)
         return manuals
+    
     def make_manual(self,command):
         "makes a manual for a specific command"
         desc = self.extract_description(command)
@@ -234,7 +238,9 @@ class CommandManualGenerator:
         for key in self.keys:
             if command in self.keys[key]:
                 matching += self.keys[key]
-        return list(set(matching))
+        relatedSet = set(matching)
+        relatedSet.remove(command)
+        return list(relatedSet)
 
     def make_groups(self):
         "a function that makes a group of commands"
@@ -248,13 +254,56 @@ class CommandManualGenerator:
         self.keys["display"].append("uname")
         self.keys["display"].append("ifconfig")
         self.keys["display"].append("lscpu")
-
+    
+    def write_to_file(self, manuals):
+        "a function that writes the manuals xml string to xml docs"
+        if not os.path.exists("manuals"):
+            os.mkdir("manuals")
+        for manual in manuals:
+            serializer = XmlSerializer()
+            xml_string = serializer.serialize(manual)
+            with open(f"manuals/{manual.command}.xml", 'w') as file:
+                file.write(xml_string)
         
+    def make_single_xml(self, command):
+        "a function that makes a single xml file for a command"
+        if not os.path.exists("manuals"):
+            os.mkdir("manuals")
+        serializer = XmlSerializer()
+        manual = self.make_manual(command)
+        xml_string = serializer.serialize(manual)
+        with open(f"manuals/{manual.command}.xml", 'w') as file:
+            file.write(xml_string)
+            
+class XmlSerializer:
+    "a class that serializes CommandManual objects to XML strings"
+    def serialize(self, command_manual):
+        if not isinstance(command_manual, CommandManual):
+            raise TypeError("CommandManual object expected")
+        
+        root = ET.Element("CommandManual")
 
+        command = ET.SubElement(root, "command")
+        command.text = command_manual.command
 
+        description = ET.SubElement(root, "description")
+        description.text = command_manual.description
 
+        version = ET.SubElement(root, "version")
+        version.text = command_manual.version
 
+        example = ET.SubElement(root, "example")
+        example.text = command_manual.example
 
-       
-    
-    
+        example_output = ET.SubElement(root, "example_output")
+        example_output.text = '\n' + command_manual.example_output
+
+        related_commands = ET.SubElement(root, "related_commands")
+        if command_manual.related_commands:
+            related_commands.text = ', '.join(command_manual.related_commands)
+
+        xml_string = ET.tostring(root, encoding='unicode')
+        dom = parseString(xml_string)
+        pretty_xml = dom.toprettyxml()
+
+        return pretty_xml

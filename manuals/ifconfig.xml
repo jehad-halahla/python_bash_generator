@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>ifconfig</command>
+	<description>Ifconfig  is  used  to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it is
+usually only needed when debugging or when system tuning is needed.</description>
+	<version>net-tools 2.10-alpha</version>
+	<example>ifconfig</example>
+	<example_output>
+enp0s3: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::c651:89b2:3e4d:849e  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 08:00:27:43:ca:55  txqueuelen 1000  (Ethernet)
+        RX packets 246001  bytes 338873927 (338.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 35825  bytes 12225204 (12.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</example_output>
+	<related_commands>netstat, arp, rarp, interfaces, iptables, route, ifup</related_commands>
+</CommandManual>

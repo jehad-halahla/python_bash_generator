@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>whoami</command>
+	<description>Print the user name associated with the current effective user ID.  Same as id -un.</description>
+	<version>whoami (GNU coreutils) 8.32</version>
+	<example>whoami</example>
+	<example_output>
+jehad
+</example_output>
+	<related_commands>who, id</related_commands>
+</CommandManual>

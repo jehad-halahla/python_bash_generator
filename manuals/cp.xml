@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>cp</command>
+	<description>Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.</description>
+	<version>cp (GNU coreutils) 8.32</version>
+	<example>cp cp1.txt temp/cp2.txt &amp;&amp; ls -l temp/cp2.txt</example>
+	<example_output>
+-rw-rw-r-- 1 jehad jehad 11 Jan 31 17:51 temp/cp2.txt
+</example_output>
+	<related_commands>cpgr, cppw, cpan, cpp, cpio, cpp-11, cpan5.34-x86_64-linux-gnu, cpgr, cppw, cpan, cpp, cpio, cpp-11, cpan5.34-x86_64-linux-gnu</related_commands>
+</CommandManual>

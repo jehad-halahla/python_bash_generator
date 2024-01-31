@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>uptime</command>
+	<description>uptime  gives  a  one  line display of the following information.  The current time, how long the system has been running, how many users are currently
+logged on, and the system load averages for the past 1, 5, and 15 minutes.</description>
+	<version>uptime from procps-ng 3.3.17</version>
+	<example>uptime</example>
+	<example_output>
+ 17:51:57 up  2:05,  1 user,  load average: 0.92, 0.63, 0.74
+</example_output>
+	<related_commands>top, ps, utmp, w</related_commands>
+</CommandManual>

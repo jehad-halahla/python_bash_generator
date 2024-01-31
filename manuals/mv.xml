@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>mv</command>
+	<description>Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.</description>
+	<version>mv (GNU coreutils) 8.32</version>
+	<example>mv mv1.txt temp/mv2.txt &amp;&amp; ls -l temp/mv2.txt</example>
+	<example_output>
+-rw-rw-r-- 1 jehad jehad 11 Jan 31 17:51 temp/mv2.txt
+</example_output>
+	<related_commands>rename</related_commands>
+</CommandManual>

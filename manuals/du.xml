@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>du</command>
+	<description>Summarize disk usage of the set of FILEs, recursively for directories.</description>
+	<version>du (GNU coreutils) 8.32</version>
+	<example>du</example>
+	<example_output>
+12	./temp
+4	./.git/objects/pack
+8	./.git/objects/54
+8	./.git/objects/09
+8	./.git/objects/47
+8	./.git/objects/ce
+8	./.git/objects/d6
+8	./.git/objects/0f
+4	./.git/objects/info
+8	./.git/objects/7a</example_output>
+	<related_commands>dumpe2fs, duplicity, dumpkeys, dumpe2fs, duplicity, dumpkeys</related_commands>
+</CommandManual>

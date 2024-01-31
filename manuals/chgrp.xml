@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>chgrp</command>
+	<description>Change the group of each FILE to GROUP.  With --reference, change the group of each FILE to that of RFILE.</description>
+	<version>chgrp (GNU coreutils) 8.32</version>
+	<example>chgrp jehad file.txt &amp;&amp; ls -l file.txt</example>
+	<example_output>
+-rwxrwxrwx 1 jehad jehad 25 Jan 29 15:40 file.txt
+</example_output>
+	<related_commands>chown</related_commands>
+</CommandManual>

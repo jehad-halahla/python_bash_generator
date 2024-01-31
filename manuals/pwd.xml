@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>pwd</command>
+	<description>Print the full filename of the current working directory.</description>
+	<version>pwd (GNU coreutils) 8.32</version>
+	<example>pwd</example>
+	<example_output>
+/home/jehad/python_bash_generator
+</example_output>
+	<related_commands>getcwd</related_commands>
+</CommandManual>

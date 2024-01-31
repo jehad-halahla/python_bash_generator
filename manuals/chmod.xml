@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>chmod</command>
+	<description>This manual page documents the GNU version of chmod.  chmod changes the file mode bits of each given file according to mode, which can be either a sym‐
+bolic representation of changes to make, or an octal number representing the bit pattern for the new mode bits.</description>
+	<version>chmod (GNU coreutils) 8.32</version>
+	<example>chmod 777 file.txt &amp;&amp; ls -l file.txt</example>
+	<example_output>
+-rwxrwxrwx 1 jehad jehad 25 Jan 29 15:40 file.txt
+</example_output>
+	<related_commands>chown, chgrp</related_commands>
+</CommandManual>

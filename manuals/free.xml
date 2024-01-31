@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>free</command>
+	<description>free  displays  the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel. The in‐
+formation is gathered by parsing /proc/meminfo. The displayed columns are:</description>
+	<version>free from procps-ng 3.3.17</version>
+	<example>free</example>
+	<example_output>
+               total        used        free      shared  buff/cache   available
+Mem:         4000484     2069924      637828       52188     1292732     1591336
+Swap:        2875388      724104     2151284
+</example_output>
+	<related_commands>slabtop, ps, vmstat, top</related_commands>
+</CommandManual>

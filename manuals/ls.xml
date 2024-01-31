@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<CommandManual>
+	<command>ls</command>
+	<description>List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.</description>
+	<version>ls (GNU coreutils) 9.32</version>
+	<example>ls</example>
+	<example_output>
+commands.txt
+cp1.txt
+file.txt
+mans.py
+manuals
+manuals.py
+__pycache__
+temp
+tester.py
+verification.py</example_output>
+	<related_commands>lspcmcia, lsmod, lslocks, lsattr, lshw, lsinitramfs, lsns, lsusb, lslogins, lsmem, lsb_release, lspci, lsmod, lscpu, lspgpot, lsof, lsblk, lsipc, lspcmcia, lsmod, lslocks, lsattr, lshw, lsinitramfs, lsns, lsusb, lslogins, lsmem, lsb_release, lspci, lsmod, lscpu, lspgpot, lsof, lsblk, lsipc</related_commands>
+</CommandManual>
